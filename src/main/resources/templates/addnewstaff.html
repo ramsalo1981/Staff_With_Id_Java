@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/formstyle.css}">
+    <title>Document</title>
+</head>
+<body>
+<div class="form-container">
+    <h2 class="form-title">Add New Staff</h2> <!-- Title added here -->
+    <a class="add-button" th:href="@{/allstaff}">All Staff</a>
+    <form class="responsive-form" method="post" th:object="${newStaff}" th:action="@{/datasubmitform}">
+        <div class="form-group">
+            <label for="StaffName">Name:</label>
+            <input type="text" id="StaffName" th:field="*{name}" placeholder="Staff Name..." >
+            <p style="color: red;" th:errors="*{name}"></p>
+        </div>
+        <div class="form-group">
+            <label for="StaffTitle">Title:</label>
+            <input type="text" id="StaffTitle" th:field="*{title}" placeholder="Staff Title..." >
+            <p style="color: red;" th:errors="*{title}"></p>
+        </div>
+        <div class="form-group">
+            <label for="StaffSalary">Salary:</label>
+            <input type="text" id="StaffSalary" th:field="*{salary}" placeholder="Staff Salary..." >
+            <p style="color: red;" th:errors="*{salary}"></p>
+        </div>
+        <div class="form-group">
+            <input type="hidden"  th:field="*{id}">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space between title and form */
+    color: #333; /* Title color */
+}
+.responsive-form {
+    display: flex;
+    flex-direction: column; /* Keep inputs in a vertical layout */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+.add-button {
+    display: inline-block;
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0; /* Space above and below the button */
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .responsive-form {
+        flex-direction: column; /* Ensure vertical layout on smaller screens */
+    }
+}

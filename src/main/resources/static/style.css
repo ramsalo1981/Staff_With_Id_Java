@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+h1{
+    color: green;
+    }
+
+.table-row {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-row:last-child {
+    border-bottom: none; /* Remove border for the last row */
+}
+
+.table-cell {
+    flex: 1; /* Each cell takes equal space */
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ccc;
+}
+
+.table-cell:last-child {
+    border-right: none; /* Remove border for the last cell */
+}
+.table-cell a {
+    text-decoration: none;
+    color: blue;
+    margin: 0 5px; /* Add some space between links */
+}
+
+.table-cell a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.add-button {
+    display: inline-block;
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0; /* Space above and below the button */
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .table {
+        flex-direction: column;
+    }
+
+    .table-row {
+        flex-direction: column;
+    }
+
+    .table-cell {
+        border-right: none; /* Remove right border for small screens */
+        border-bottom: 1px solid #ccc; /* Add bottom border for cells */
+    }
+
+    .table-cell:last-child {
+        border-bottom: none; /* Remove border for the last cell */
+    }
+}
